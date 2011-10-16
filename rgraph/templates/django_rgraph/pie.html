@@ -1,0 +1,14 @@
+<script>
+window.onload = function() {
+	var {{ chart.name }} = new RGraph.Pie('{{ chart.name }}', [{% for value in chart.values %}{{ value }}{% if not forloop.last %},{% endif %}{% endfor %}]);
+	{% for option, value in chart.options.items %}
+	{{ chart.name }}.Set('{{ option }}', {{ value }});
+	{% endfor %}
+	
+	{% if chart.animate %}
+	RGraph.Effects.Pie.RoundRobin({{ chart.name }});
+	{% else %}
+	{{ chart.name }}.Draw();	
+	{% endif %}
+}
+</script>
