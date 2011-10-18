@@ -6,6 +6,8 @@ class Chart(object):
         self.name = name
         self.values = values
         self.options = options
+        
+        self.js = ["RGraph.common.core.js", "RGraph.common.tooltips.js", "RGraph.common.effects.js"]
 
 class PieChart(Chart):
     """Create a Pie Chart"""
@@ -13,6 +15,8 @@ class PieChart(Chart):
         super(PieChart, self).__init__(name, values, options)
 
         self.template = "django_rgraph/pie.html"
+        
+        self.js.append("RGraph.pie.js")
         
 class BarChart(Chart):
     """Create a bar chat"""

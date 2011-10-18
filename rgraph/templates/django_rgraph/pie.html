@@ -1,3 +1,6 @@
+{% extends "django_rgraph/rgraph_base.html" %}
+
+{% block rgraph_chart %}
 <script>
 window.onload = function() {
 	var {{ chart.name }} = new RGraph.Pie('{{ chart.name }}', [{% for value in chart.values %}{{ value }}{% if not forloop.last %},{% endif %}{% endfor %}]);
@@ -12,3 +15,4 @@ window.onload = function() {
 	{% endif %}
 }
 </script>
+{% endblock %}

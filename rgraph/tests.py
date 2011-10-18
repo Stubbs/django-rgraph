@@ -16,7 +16,7 @@ class SimpleTest(TestCase):
         self.DATA = [10, 20, 35, 50]
         self.CHART_OPTIONS = {'chart.gutter.left': 30}
 
-        self.PIE_JSCRIPT = "<script>\nwindow.onload = function() {\n\tvar pie1 = new RGraph.Pie('pie1', [10,20,35,50]);\n\t\n\tpie1.Set('chart.gutter.left', 30);\n\t\n\t\n\t\n\tpie1.Draw();\t\n\t\n}\n</script>"
+        self.PIE_JSCRIPT = "\n\n\n\n\n<script>\nwindow.onload = function() {\n\tvar pie1 = new RGraph.Pie('pie1', [10,20,35,50]);\n\t\n\tpie1.Set('chart.gutter.left', 30);\n\t\n\t\n\t\n\tpie1.Draw();\t\n\t\n}\n</script>\n"
 
     def testPieChart(self):
         """Tests that a template containing a pie chat tag renders the correct javascript."""

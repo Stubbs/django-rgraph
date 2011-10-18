@@ -1,0 +1,7 @@
+{% block js.custom %}
+{% for js in chart.js %}
+<script src="RGraph/js/{{ js }}"></script>
+{% endfor %}
+{% endblock %}
+
+{% block rgraph_chart %}Insert Chart Here{% endblock %}

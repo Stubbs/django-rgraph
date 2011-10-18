@@ -33,7 +33,7 @@ def rgraph(parser, token):
 	"""
 	
 	Example:: 
-	{% rgraph type="pie" %}
+	{% rgraph chart %}
 	
 	"""
 	
